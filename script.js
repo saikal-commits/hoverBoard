@@ -161,6 +161,13 @@ for (let i = 0; i < 304; i++) {
   board.append(box);
   box.addEventListener("mouseover", () => setBackground(box));
   box.addEventListener("mouseout", () => removeBackground(box));
+  on.addEventListener("click", () => setBackground(box));
+  //   on.addEventListener("click", () => {
+  //     setInterval(() => {
+  //       setBackground(box);
+  //     }, 1000);
+  //   });
+  off.addEventListener("click", () => removeBackground(box));
 }
 
 function randomColor() {
@@ -177,5 +184,3 @@ function removeBackground(el) {
   el.style.background = "#777474";
   el.style.boxShadow = "none";
 }
-
-
